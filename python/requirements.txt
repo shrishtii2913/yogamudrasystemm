@@ -1,0 +1,6 @@
+# Python dependencies for pose_detector.py
+# Pin versions for reproducibility in Docker
+
+opencv-python-headless==4.9.0.80   # OpenCV without GUI deps (camera only)
+mediapipe==0.10.14                  # Google MediaPipe hand landmark model
+numpy>=1.24,<2.0                    # Required by both OpenCV and MediaPipe

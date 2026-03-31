@@ -1,0 +1,14 @@
+Timestamp,TruePose,Pose,Confidence,FPS
+2024-11-15 10:00:01,No Pose,No Pose,0.0000,29.8
+2024-11-15 10:00:05,Gyan Mudra,Gyan Mudra,0.8320,28.7
+2024-11-15 10:00:08,Gyan Mudra,Gyan Mudra,0.9010,29.1
+2024-11-15 10:00:12,Gyan Mudra,No Pose,0.0000,28.5
+2024-11-15 10:00:20,Abhaya Mudra,Abhaya Mudra,0.7650,28.4
+2024-11-15 10:00:25,Abhaya Mudra,Abhaya Mudra,0.8020,28.9
+2024-11-15 10:00:30,Dhyana Mudra,Dhyana Mudra,0.8810,29.6
+2024-11-15 10:00:35,Dhyana Mudra,Dhyana Mudra,0.8540,29.3
+2024-11-15 10:00:40,Shuni Mudra,Shuni Mudra,0.7230,28.9
+2024-11-15 10:00:45,Shuni Mudra,No Pose,0.0000,29.1
+2024-11-15 10:00:50,Chin Mudra,Chin Mudra,0.8480,29.3
+2024-11-15 10:00:55,Chin Mudra,Chin Mudra,0.8760,29.0
+2024-11-15 10:01:00,No Pose,No Pose,0.0000,29.7
