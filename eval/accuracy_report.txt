@@ -1,0 +1,43 @@
+================================================================
+  Yoga Mudra Classifier — Accuracy Report
+  Generated : 2026-03-29 15:17:23
+  Source    : eval/ground_truth.csv
+  Rows      : 13
+================================================================
+
+  Overall Accuracy : 84.62%  (11/13 correct)
+
+  Per-Class Metrics:
+----------------------------------------------------------------
+  Pose                   Prec  Recall      F1  Support
+----------------------------------------------------------------
+  Gyan Mudra            1.000   0.667   0.800        3
+  Chin Mudra            1.000   1.000   1.000        2
+  Abhaya Mudra          1.000   1.000   1.000        2
+  Dhyana Mudra          1.000   1.000   1.000        2
+  Shuni Mudra           1.000   0.500   0.667        2
+  No Pose               0.500   1.000   0.667        2
+----------------------------------------------------------------
+  Macro avg             0.917   0.861   0.856       13
+
+  Confusion Matrix (rows=True, cols=Predicted):
+----------------------------------------------------------------
+              Gyan Mudra    Chin Mudra    Abhaya Mudra  Dhyana Mudra  Shuni Mudra   No Pose       
+--------------------------------------------------------------------------------------------------
+Gyan Mudra    2             0             0             0             0             1             
+Chin Mudra    0             2             0             0             0             0             
+Abhaya Mudra  0             0             2             0             0             0             
+Dhyana Mudra  0             0             0             2             0             0             
+Shuni Mudra   0             0             0             0             1             1             
+No Pose       0             0             0             0             0             2             
+
+================================================================
+  Confidence Statistics:
+----------------------------------------------------------------
+  Abhaya Mudra          avg=0.784  min=0.765  max=0.802  n=2
+  Chin Mudra            avg=0.862  min=0.848  max=0.876  n=2
+  Dhyana Mudra          avg=0.867  min=0.854  max=0.881  n=2
+  Gyan Mudra            avg=0.867  min=0.832  max=0.901  n=2
+  Shuni Mudra           avg=0.723  min=0.723  max=0.723  n=1
+
+================================================================
