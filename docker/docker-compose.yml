@@ -1,0 +1,47 @@
+# =============================================================================
+# docker-compose.yml — Yoga Mudra Detection System
+# =============================================================================
+# Runs both the Python and C++ components inside a single container with
+# X11 display forwarding so GUI windows appear on the host desktop.
+#
+# Usage:
+#   docker compose up --build
+# =============================================================================
+
+version: "3.9"
+
+services:
+  yoga-mudra:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: yoga-mudra-system:latest
+    container_name: yoga_mudra
+
+    # ── Camera device passthrough ──────────────────────────────────────────
+    devices:
+      - /dev/video0:/dev/video0    # primary webcam
+    group_add:
+      - video                       # permission group for /dev/video*
+
+    # ── X11 display forwarding ─────────────────────────────────────────────
+    environment:
+      - DISPLAY=${DISPLAY}
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw   # X11 socket
+      - ./logs:/app/logs                    # persist session logs on host
+      - ./shared:/app/shared                # persist JSON IPC on host
+
+    # Allow X11 network access
+    network_mode: host
+
+    # Required for /dev/video* access
+    privileged: false
+    security_opt:
+      - seccomp:unconfined
+
+    restart: "no"
+
+    stdin_open: true
+    tty: true
